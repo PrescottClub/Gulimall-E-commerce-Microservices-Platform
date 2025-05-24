@@ -39,15 +39,13 @@ public class SkuInfoVo {
 	 */
 	private String skuTitle;
 	/**
-	 * 副标题
-	 */
+	 * 副标�?	 */
 	private String skuSubtitle;
 	/**
 	 * 价格
 	 */
 	private BigDecimal price;
 	/**
-	 * 销量
-	 */
+	 * 销�?	 */
 	private Long saleCount;
 }

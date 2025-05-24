@@ -27,14 +27,12 @@ spring:
     #   设置存活时间
     redis:
       time-to-live: 3600000
-      #      如果指定了前缀就用我们指定的 如果没有就用缓存的名字作为前缀
+      #      如果指定了前缀就用我们指定�?如果没有就用缓存的名字作为前缀
       #      key-prefix: CACHE_
-      #      是否缓存空值
-      cache-null-values: true
+      #      是否缓存空�?      cache-null-values: true
 #    cache-names:
 
-  #配置项目热部署
-  devtools:
+  #配置项目热部�?  devtools:
     restart:
       enabled: true
       additional-paths: src/main/java

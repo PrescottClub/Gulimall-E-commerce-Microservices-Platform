@@ -8,8 +8,7 @@ import java.util.Date;
 
 /**
  * <p>Title: MemberRsepVo</p>
- * Description：
- * date：2020/6/26 17:17
+ * Description�? * date�?020/6/26 17:17
  */
 @ToString
 @Data
@@ -20,8 +19,7 @@ public class MemberRespVo implements Serializable {
 	 */
 	private Long levelId;
 	/**
-	 * 用户名
-	 */
+	 * 用户�?	 */
 	private String username;
 	/**
 	 * 密码
@@ -52,16 +50,14 @@ public class MemberRespVo implements Serializable {
 	 */
 	private Date birth;
 	/**
-	 * 所在城市
-	 */
+	 * 所在城�?	 */
 	private String city;
 	/**
 	 * 职业
 	 */
 	private String job;
 	/**
-	 * 个性签名
-	 */
+	 * 个性签�?	 */
 	private String sign;
 	/**
 	 * 用户来源
@@ -72,12 +68,10 @@ public class MemberRespVo implements Serializable {
 	 */
 	private Integer integration;
 	/**
-	 * 成长值
-	 */
+	 * 成长�?	 */
 	private Integer growth;
 	/**
-	 * 启用状态
-	 */
+	 * 启用状�?	 */
 	private Integer status;
 	/**
 	 * 注册时间

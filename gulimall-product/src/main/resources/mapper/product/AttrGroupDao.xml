@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.atguigu.gulimall.product.dao.AttrGroupDao">
+<mapper namespace="com.terenceqin.gulimall.product.dao.AttrGroupDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.atguigu.gulimall.product.entity.AttrGroupEntity" id="attrGroupMap">
+	<!-- 可根据自己的需求，是否要使�?-->
+    <resultMap type="com.terenceqin.gulimall.product.entity.AttrGroupEntity" id="attrGroupMap">
         <result property="attrGroupId" column="attr_group_id"/>
         <result property="attrGroupName" column="attr_group_name"/>
         <result property="sort" column="sort"/>
@@ -15,9 +15,9 @@
 
 
     <!-- 封装自定义结果集 -->
-    <resultMap id="SpuItemAttrGroupVo" type="com.atguigu.gulimall.product.vo.SpuItemAttrGroup">
+    <resultMap id="SpuItemAttrGroupVo" type="com.terenceqin.gulimall.product.vo.SpuItemAttrGroup">
         <result column="attr_group_name" property="groupName" javaType="string"></result>
-        <collection property="attrs" ofType="com.atguigu.gulimall.product.vo.SpuBaseAttrVo">
+        <collection property="attrs" ofType="com.terenceqin.gulimall.product.vo.SpuBaseAttrVo">
             <result column="attr_name" property="attrName" javaType="string"></result>
             <result column="attr_value" property="attrValue" javaType="string"></result>
         </collection>

@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * <p>Title: MemberFeignService</p>
- * Descriptionï¼š
- * dateï¼š2020/6/25 20:31
+ * Descriptionï¼? * dateï¼?020/6/25 20:31
  */
 @FeignClient("gulimall-member")
 public interface MemberFeignService {

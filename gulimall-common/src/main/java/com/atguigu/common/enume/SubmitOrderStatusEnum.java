@@ -1,12 +1,12 @@
 package com.atguigu.common.enume;
 
 public enum SubmitOrderStatusEnum {
-    SUCCESS(0,"正常状态"),
+    SUCCESS(0,"正常状�?),
     CREATING(1,"在创建中"),
     STOCK(2,"库存不足"),
     CHECKPRICE(3,"验价失败"),
-    TOKENERROR(4,"已取消"),
-    SERVICING(5,"售后中"),
+    TOKENERROR(4,"已取�?),
+    SERVICING(5,"售后�?),
     ;
 
     SubmitOrderStatusEnum(Integer code, String msg) {

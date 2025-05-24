@@ -1,7 +1,7 @@
-package com.atguigu.gulimall.ware;
+package com.terenceqin.gulimall.ware;
 
-import com.atguigu.gulimall.ware.entity.PurchaseDetailEntity;
-import com.atguigu.gulimall.ware.service.impl.PurchaseDetailServiceImpl;
+import com.terenceqin.gulimall.ware.entity.PurchaseDetailEntity;
+import com.terenceqin.gulimall.ware.service.impl.PurchaseDetailServiceImpl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.core.AmqpAdmin;
@@ -123,8 +123,7 @@ class GulimallWareApplicationTests {
 	}
 
 	/**
-	 * 订单释放直接和库存释放进行绑定
-	 */
+	 * 订单释放直接和库存释放进行绑�?	 */
 	@Test
 	public void orderReleaseOtherBinding(){
 

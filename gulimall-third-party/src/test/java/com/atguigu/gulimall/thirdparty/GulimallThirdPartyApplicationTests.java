@@ -1,4 +1,4 @@
-package com.atguigu.gulimall.thirdparty;
+package com.terenceqin.gulimall.thirdparty;
 
 import com.aliyun.oss.OSSClient;
 import org.junit.jupiter.api.Test;
@@ -29,8 +29,7 @@ class GulimallThirdPartyApplicationTests {
     @Test
     public void testUpload() throws FileNotFoundException {
         FileInputStream inputStream = new FileInputStream("C:\\Users\\HAN\\Downloads\\123.jpg");
-        // 参数1位bucket  参数2位最终名字
-        ossClient.putObject("gulimall-fermhan","321.jpg",inputStream);
+        // 参数1位bucket  参数2位最终名�?        ossClient.putObject("gulimall-fermhan","321.jpg",inputStream);
         ossClient.shutdown();
     }
 

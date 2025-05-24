@@ -2,8 +2,7 @@ package com.atguigu.common.constant;
 
 /**
  * <p>Title: AuthServerConstant</p>
- * Descriptionï¼š
- * dateï¼š2020/6/25 16:03
+ * Descriptionï¼? * dateï¼?020/6/25 16:03
  */
 public class AuthServerConstant {
 	public static final String SMS_CODE_CACHE_PREFIX = "sms:code:";

@@ -1,4 +1,4 @@
-ï»¿ipAddr: 192.168.56.10
+ipAddr: 192.168.56.10
 
 server:
   port: 9001
@@ -19,25 +19,25 @@ spring:
     cache: false
     prefix: classpath:/templates/
     suffix: .html
-  session: # ä½¿ç”¨rediså­˜å‚¨session
+  session: # Ê¹ÓÃredis´æ´¢session
     store-type: redis
   redis:
     host: ${ipAddr}
   rabbitmq:
     host: ${ipAddr}
     port: 5672
-    # æŒ‡å®šè™šæ‹Ÿä¸»æœº
+    # Ö¸¶¨ĞéÄâÖ÷»ú
     virtual-host: /
     username: guest
     password: guest
-    # å¼€å¯å‘é€ç«¯ç¡®è®¤
+    # ¿ªÆô·¢ËÍ¶ËÈ·ÈÏ
     publisher-confirms: true
-    #ã€€å¼€å¯å‘é€ç«¯æ¶ˆæ¯æŠµè¾¾é˜Ÿåˆ—ç¡®è®¤
+    #¡¡¿ªÆô·¢ËÍ¶ËÏûÏ¢µÖ´ï¶ÓÁĞÈ·ÈÏ
     publisher-returns: true
-    # åªè¦æŠµè¾¾é˜Ÿåˆ—ï¼Œä»¥å¼‚æ­¥ä¼˜å…ˆå›è°ƒæˆ‘ä»¬è¿™ä¸ª returnconfirm
+    # Ö»ÒªµÖ´ï¶ÓÁĞ£¬ÒÔÒì²½ÓÅÏÈ»Øµ÷ÎÒÃÇÕâ¸ö returnconfirm
     template:
       mandatory: true
-    # æ‰‹åŠ¨ackæ¶ˆæ¯ æ¶ˆæ¯ä¸å®¹æ˜“ä¸¢å¤±
+    # ÊÖ¶¯ackÏûÏ¢ ÏûÏ¢²»ÈİÒ×¶ªÊ§
     listener:
       simple:
         acknowledge-mode: manual
@@ -45,7 +45,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
   zipkin:
     base-url: ${ipAddr}:9411/
-    # å…³é—­æˆ‘ä»¬è‡ªåŠ¨çš„æœåŠ¡å‘ç°åŠŸèƒ½
+    # ¹Ø±ÕÎÒÃÇ×Ô¶¯µÄ·şÎñ·¢ÏÖ¹¦ÄÜ
     discovery-client-enabled: false
     sender:
       type: web
@@ -70,7 +70,7 @@ mybatis-plus:
 #    delayRoutingKey:
 #    releaseQueue:
 #    releaseRoutingKey: stock.release
-#    # è®¢å•è‡ªåŠ¨è¿‡æœŸæ—¶é—´ å•ä½:(æ¯«ç§’)
+#    # ¶©µ¥×Ô¶¯¹ıÆÚÊ±¼ä µ¥Î»:(ºÁÃë)
 #    ttl:
 
 gulimall:
@@ -81,7 +81,7 @@ gulimall:
 
 alipay:
   app_id: 2016102100732649
-  # æ”¯ä»˜å®å¼‚æ­¥å›è°ƒé€šçŸ¥ è¿™ä¸ªæ¥æ„Ÿåº”è®¢å•æ˜¯å¦å®Œæˆ
+  # Ö§¸¶±¦Òì²½»Øµ÷Í¨Öª Õâ¸öÀ´¸ĞÓ¦¶©µ¥ÊÇ·ñÍê³É
   notify_url: http://sthwsr.natappfree.cc/payed/notify
   return_url: http://member.gulimall.com/memberOrder.html
   timeout: 15m

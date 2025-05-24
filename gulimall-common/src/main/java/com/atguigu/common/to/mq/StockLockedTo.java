@@ -4,8 +4,7 @@ import lombok.Data;
 
 /**
  * <p>Title: StockLockedTo</p>
- * Descriptionï¼š
- * dateï¼š2020/7/3 20:37
+ * Descriptionï¼? * dateï¼?020/7/3 20:37
  */
 @Data
 public class StockLockedTo {

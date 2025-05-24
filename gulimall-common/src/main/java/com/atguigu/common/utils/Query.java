@@ -1,10 +1,9 @@
 /**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
+ * Copyright (c) 2016-2019 人人开�?All rights reserved.
  *
  * https://www.renren.io
  *
- * 版权所有，侵权必究！
- */
+ * 版权所有，侵权必究�? */
 
 package com.atguigu.common.utils;
 
@@ -55,8 +54,7 @@ public class Query<T> {
         params.put(Constant.PAGE, page);
 
         // 排序字段
-        // 防止SQL注入（因为sidx、order是通过拼接SQL实现排序的，会有SQL注入风险）
-        String orderField = SQLFilter.sqlInject((String)params.get(Constant.ORDER_FIELD));
+        // 防止SQL注入（因为sidx、order是通过拼接SQL实现排序的，会有SQL注入风险�?        String orderField = SQLFilter.sqlInject((String)params.get(Constant.ORDER_FIELD));
         String order = (String)params.get(Constant.ORDER);
 
 
@@ -68,10 +66,8 @@ public class Query<T> {
                 return page.addOrder(OrderItem.desc(orderField));
             }
         }
-        // 如果已经传来了排序字段，已经返回了
-
-        // 没有排序字段，则不排序
-        if(StringUtils.isBlank(defaultOrderField)){
+        // 如果已经传来了排序字段，已经返回�?
+        // 没有排序字段，则不排�?        if(StringUtils.isBlank(defaultOrderField)){
             return page;
         }
 

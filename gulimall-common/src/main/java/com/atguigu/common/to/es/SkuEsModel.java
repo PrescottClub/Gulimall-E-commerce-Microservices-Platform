@@ -8,8 +8,7 @@ import java.util.List;
 
 /**
  * <p>Title: SkuEsModel</p>
- * Description：
- * "mappings": {
+ * Description�? * "mappings": {
  *     "properties": {
  *       "skuId":{
  *         "type": "long"
@@ -77,7 +76,7 @@ import java.util.List;
  *       }
  *     }
  *   }
- * date：2020/6/8 18:52
+ * date�?020/6/8 18:52
  */
 @Data
 public class SkuEsModel implements Serializable {
@@ -111,8 +110,7 @@ public class SkuEsModel implements Serializable {
 	private List<Attrs> attrs;
 
 	/**
-	 *  检索属性
-	 */
+	 *  检索属�?	 */
 	@Data
 	public static class Attrs implements Serializable{
 		private Long attrId;

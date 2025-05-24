@@ -1,10 +1,9 @@
 /**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
+ * Copyright (c) 2016-2019 人人开�?All rights reserved.
  *
  * https://www.renren.io
  *
- * 版权所有，侵权必究！
- */
+ * 版权所有，侵权必究�? */
 
 package com.atguigu.common.utils.xss;
 
@@ -20,8 +19,7 @@ public class SQLFilter {
 
     /**
      * SQL注入过滤
-     * @param str  待验证的字符串
-     */
+     * @param str  待验证的字符�?     */
     public static String sqlInject(String str){
         if(StringUtils.isBlank(str)){
             return null;
@@ -32,8 +30,7 @@ public class SQLFilter {
         str = StringUtils.replace(str, ";", "");
         str = StringUtils.replace(str, "\\", "");
 
-        //转换成小写
-        str = str.toLowerCase();
+        //转换成小�?        str = str.toLowerCase();
 
         //非法字符
         String[] keywords = {"master", "truncate", "insert", "select", "delete", "update", "declare", "alter", "drop"};

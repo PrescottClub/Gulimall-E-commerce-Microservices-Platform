@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.atguigu.gulimall.product.dao.OmsOrderReturnApplyDao">
+<mapper namespace="com.terenceqin.gulimall.product.dao.OmsOrderReturnApplyDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.atguigu.gulimall.product.entity.OmsOrderReturnApplyEntity" id="omsOrderReturnApplyMap">
+	<!-- 可根据自己的需求，是否要使�?-->
+    <resultMap type="com.terenceqin.gulimall.product.entity.OmsOrderReturnApplyEntity" id="omsOrderReturnApplyMap">
         <result property="id" column="id"/>
         <result property="orderId" column="order_id"/>
         <result property="skuId" column="sku_id"/>
@@ -24,7 +24,7 @@
         <result property="skuPrice" column="sku_price"/>
         <result property="skuRealPrice" column="sku_real_price"/>
         <result property="reason" column="reason"/>
-        <result property="description述" column="description述"/>
+        <result property="description�? column="description�?/>
         <result property="descPics" column="desc_pics"/>
         <result property="handleNote" column="handle_note"/>
         <result property="handleMan" column="handle_man"/>

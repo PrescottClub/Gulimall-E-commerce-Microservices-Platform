@@ -6,8 +6,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * <p>Title: MyWebConfig</p>
- * Description：页面映射
- * date：2020/6/25 13:36
+ * Description：页面映�? * date�?020/6/25 13:36
  */
 @Configuration
 public class AuthWebConfig implements WebMvcConfigurer {

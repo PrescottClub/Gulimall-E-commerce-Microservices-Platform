@@ -1,4 +1,4 @@
-package com.atguigu.gulimall.cart;
+package com.terenceqin.gulimall.cart;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

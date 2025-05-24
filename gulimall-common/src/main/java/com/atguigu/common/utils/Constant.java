@@ -1,10 +1,9 @@
 /**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
+ * Copyright (c) 2016-2019 人人开�?All rights reserved.
  *
  * https://www.renren.io
  *
- * 版权所有，侵权必究！
- */
+ * 版权所有，侵权必究�? */
 
 package com.atguigu.common.utils;
 
@@ -21,8 +20,7 @@ public class Constant {
      */
     public static final String PAGE = "page";
     /**
-     * 每页显示记录数
-     */
+     * 每页显示记录�?     */
     public static final String LIMIT = "limit";
     /**
      * 排序字段
@@ -41,7 +39,7 @@ public class Constant {
 	 * 
 	 * @author chenshun
 	 * @email sunlightcs@gmail.com
-	 * @date 2016年11月15日 下午1:24:29
+	 * @date 2016�?1�?5�?下午1:24:29
 	 */
     public enum MenuType {
         /**
@@ -69,11 +67,10 @@ public class Constant {
     }
     
     /**
-     * 定时任务状态
-     * 
+     * 定时任务状�?     * 
      * @author chenshun
      * @email sunlightcs@gmail.com
-     * @date 2016年12月3日 上午12:07:22
+     * @date 2016�?2�?�?上午12:07:22
      */
     public enum ScheduleStatus {
         /**
@@ -101,16 +98,13 @@ public class Constant {
      */
     public enum CloudService {
         /**
-         * 七牛云
-         */
+         * 七牛�?         */
         QINIU(1),
         /**
-         * 阿里云
-         */
+         * 阿里�?         */
         ALIYUN(2),
         /**
-         * 腾讯云
-         */
+         * 腾讯�?         */
         QCLOUD(3);
 
         private int value;

@@ -1,4 +1,4 @@
-package com.atguigu.gulimall.coupon;
+package com.terenceqin.gulimall.coupon;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

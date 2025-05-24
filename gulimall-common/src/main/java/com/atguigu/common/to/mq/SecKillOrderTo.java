@@ -6,8 +6,7 @@ import java.math.BigDecimal;
 
 /**
  * <p>Title: SecKillOrderTo</p>
- * Descriptionï¼š
- * dateï¼š2020/7/9 20:08
+ * Descriptionï¼? * dateï¼?020/7/9 20:08
  */
 @Data
 public class SecKillOrderTo {

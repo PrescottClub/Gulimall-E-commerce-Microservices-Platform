@@ -1,4 +1,4 @@
-ï»¿ipAddr: 192.168.56.10
+ipAddr: 192.168.56.10
 spring:
   datasource:
     username: root
@@ -25,7 +25,7 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
-      #é…ç½®é¡¹ç›®çƒ­éƒ¨ç½²
+      #ÅäÖÃÏîÄ¿ÈÈ²¿Êğ
   devtools:
     restart:
       enabled: true

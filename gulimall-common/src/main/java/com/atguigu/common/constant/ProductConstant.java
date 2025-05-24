@@ -2,13 +2,12 @@ package com.atguigu.common.constant;
 
 /**
  * <p>Title: ProductConstant</p>
- * Description：给销售属性用来区分保存与修改  根据情况看是否需要保存关联属性
- */
+ * Description：给销售属性用来区分保存与修改  根据情况看是否需要保存关联属�? */
 public class ProductConstant {
 
 	public enum AttrEnum {
-		ATTR_TYPE_BASE(1, "基本属性"),
-		ATTR_TYPE_SALE(0, "销售属性");
+		ATTR_TYPE_BASE(1, "基本属�?),
+		ATTR_TYPE_SALE(0, "销售属�?);
 
 		private int code;
 

@@ -8,7 +8,7 @@
         <version>2.3.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.atguigu.gulimall</groupId>
+    <groupId>com.terenceqin.gulimall</groupId>
     <artifactId>gulimall-seckill</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gulimall-seckill</name>
@@ -21,7 +21,7 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.atguigu.gulimall</groupId>
+            <groupId>com.terenceqin.gulimall</groupId>
             <artifactId>gulimall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <exclusions>
@@ -56,7 +56,7 @@
         </dependency>
 
 
-        <!-- common中已经配置-->
+        <!-- common中已经配�?->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
         <!--            <artifactId>spring-boot-starter-actuator</artifactId>-->

@@ -1,10 +1,9 @@
 /**
- * Copyright (c) 2016-2019 人人开源 All rights reserved.
+ * Copyright (c) 2016-2019 人人开�?All rights reserved.
  *
  * https://www.renren.io
  *
- * 版权所有，侵权必究！
- */
+ * 版权所有，侵权必究�? */
 
 package com.atguigu.common.xss;
 
@@ -42,13 +41,11 @@ public class XssHttpServletRequestWrapper  {
 //
 //    @Override
 //    public ServletInputStream getInputStream() throws IOException {
-//        //非json类型，直接返回
-//        if(!MediaType.APPLICATION_JSON_VALUE.equalsIgnoreCase(super.getHeader(HttpHeaders.CONTENT_TYPE))){
+//        //非json类型，直接返�?//        if(!MediaType.APPLICATION_JSON_VALUE.equalsIgnoreCase(super.getHeader(HttpHeaders.CONTENT_TYPE))){
 //            return super.getInputStream();
 //        }
 //
-//        //为空，直接返回
-//        String json = IOUtils.toString(super.getInputStream(), "utf-8");
+//        //为空，直接返�?//        String json = IOUtils.toString(super.getInputStream(), "utf-8");
 //        if (StringUtils.isBlank(json)) {
 //            return super.getInputStream();
 //        }

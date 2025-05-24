@@ -1,4 +1,4 @@
-package com.atguigu.gulimall.gateway;
+package com.terenceqin.gulimall.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

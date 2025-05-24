@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * <p>Title: ThirdPartFeignService</p>
- * Descriptionï¼š
- * dateï¼š2020/6/25 15:01
+ * Descriptionï¼? * dateï¼?020/6/25 15:01
  */
 @FeignClient("gulimall-third-party")
 public interface ThirdPartFeignService {

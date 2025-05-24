@@ -6,8 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 分页工具类
- *
+ * 分页工具�? *
  * @author Mark sunlightcs@gmail.com
  */
 public class PageUtils implements Serializable {
@@ -17,12 +16,10 @@ public class PageUtils implements Serializable {
 	 */
 	private int totalCount;
 	/**
-	 * 每页记录数
-	 */
+	 * 每页记录�?	 */
 	private int pageSize;
 	/**
-	 * 总页数
-	 */
+	 * 总页�?	 */
 	private int totalPage;
 	/**
 	 * 当前页数
@@ -37,8 +34,7 @@ public class PageUtils implements Serializable {
 	 * 分页
 	 * @param list        列表数据
 	 * @param totalCount  总记录数
-	 * @param pageSize    每页记录数
-	 * @param currPage    当前页数
+	 * @param pageSize    每页记录�?	 * @param currPage    当前页数
 	 */
 	public PageUtils(List<?> list, int totalCount, int pageSize, int currPage) {
 		this.list = list;

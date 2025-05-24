@@ -1,7 +1,7 @@
-package com.atguigu.gulimall.product;
+package com.terenceqin.gulimall.product;
 
-import com.atguigu.gulimall.product.entity.BrandEntity;
-import com.atguigu.gulimall.product.service.BrandService;
+import com.terenceqin.gulimall.product.entity.BrandEntity;
+import com.terenceqin.gulimall.product.service.BrandService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,8 +35,7 @@ class GulimallProductApplicationTests {
 
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
         // 扫描的配置类，如@ComponentScan
-        // 会去解析配置类然后实例化一个扫描器去扫描
-        ac.register(A.class);
+        // 会去解析配置类然后实例化一个扫描器去扫�?        ac.register(A.class);
         ac.scan("");
         ac.refresh();
         String[] bds = ac.getBeanDefinitionNames();

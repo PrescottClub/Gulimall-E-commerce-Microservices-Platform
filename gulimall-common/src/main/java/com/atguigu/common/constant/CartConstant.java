@@ -2,8 +2,7 @@ package com.atguigu.common.constant;
 
 /**
  * <p>Title: CartConstant</p>
- * Descriptionï¼š
- */
+ * Descriptionï¼? */
 public class CartConstant {
 
 	public static final String TEMP_USER_COOKIE_NAME = "user-key";

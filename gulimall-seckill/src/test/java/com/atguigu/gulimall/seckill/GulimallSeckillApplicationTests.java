@@ -1,4 +1,4 @@
-package com.atguigu.gulimall.seckill;
+package com.terenceqin.gulimall.seckill;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

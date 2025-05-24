@@ -7,8 +7,7 @@ import java.util.List;
 
 /**
  * <p>Title: SkuReductionTO</p>
- * Description：
- * date：2020/6/5 17:33
+ * Description�? * date�?020/6/5 17:33
  */
 @Data
 public class SkuReductionTO {
@@ -17,8 +16,7 @@ public class SkuReductionTO {
 
 	/***
 	 * fullCount、discount、countStatus  打折信息
-	 * 买几件、打几折、是否参数其他优惠
-	 */
+	 * 买几件、打几折、是否参数其他优�?	 */
 	private int fullCount;
 
 	private BigDecimal discount;

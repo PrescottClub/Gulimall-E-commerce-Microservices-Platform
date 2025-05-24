@@ -21,4 +21,4 @@ server:
 
 logging:
   level:
-    com.atguigu.gulimall.product: debug
+    com.terenceqin.gulimall.product: debug

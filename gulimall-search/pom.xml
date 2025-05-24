@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.atguigu.gulimall</groupId>
+    <groupId>com.terenceqin.gulimall</groupId>
     <artifactId>gulimall-search</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gulimall-search</name>
-    <description>es检索服务</description>
+    <description>es检索服�?/description>
 
     <properties>
         <elasticsearch.version>7.4.2</elasticsearch.version>
@@ -25,7 +25,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.atguigu.gulimall</groupId>
+            <groupId>com.terenceqin.gulimall</groupId>
             <artifactId>gulimall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <exclusions>

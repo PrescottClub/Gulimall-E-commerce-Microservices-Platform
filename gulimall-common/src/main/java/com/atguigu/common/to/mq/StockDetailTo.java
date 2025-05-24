@@ -4,8 +4,7 @@ import lombok.Data;
 
 /**
  * <p>Title: StockDetailTo</p>
- * Description：
- * date：2020/7/3 20:47
+ * Description�? * date�?020/7/3 20:47
  */
 @Data
 public class StockDetailTo {
@@ -31,7 +30,7 @@ public class StockDetailTo {
 	 */
 	private Long wareId;
 	/**
-	 * 1-已锁定  2-已解锁  3-扣减
+	 * 1-已锁�? 2-已解�? 3-扣减
 	 */
 	private Integer lockStatus;
 }

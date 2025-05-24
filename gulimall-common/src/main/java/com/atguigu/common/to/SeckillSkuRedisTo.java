@@ -1,6 +1,6 @@
 package com.atguigu.common.to;
 
-//import com.atguigu.gulimall.seckill.vo.SkuInfoVo;
+//import com.terenceqin.gulimall.seckill.vo.SkuInfoVo;
 import com.atguigu.common.vo.SkuInfoVo;
 import lombok.Data;
 
@@ -22,8 +22,7 @@ public class SeckillSkuRedisTo {
 	 */
 	private Long skuId;
 	/**
-	 * 商品的秒杀随机码
-	 */
+	 * 商品的秒杀随机�?	 */
 	private String randomCode;
 	/**
 	 * 秒杀价格
@@ -43,17 +42,14 @@ public class SeckillSkuRedisTo {
 	private Integer seckillSort;
 
 	/**
-	 *  sku的详细信息
-	 */
+	 *  sku的详细信�?	 */
 	private SkuInfoVo skuInfoVo;
 
 	/**
-	 *  商品秒杀的开始时间
-	 */
+	 *  商品秒杀的开始时�?	 */
 	private Long startTime;
 
 	/**
-	 *  商品秒杀的结束时间
-	 */
+	 *  商品秒杀的结束时�?	 */
 	private Long endTime;
 }

@@ -11,11 +11,11 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * <p>Title: ListValue</p>
- * Description：JSR303自定义注解 必须有前三个方法
- * date：2020/6/1 23:25
+ * Description：JSR303自定义注�?必须有前三个方法
+ * date�?020/6/1 23:25
  */
 @Documented
-// 指定校验器   这里可以指定多个不同的校验器
+// 指定校验�?  这里可以指定多个不同的校验器
 @Constraint(validatedBy = { ListValueConstraintValidator.class })
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
 @Retention(RUNTIME)

@@ -12,7 +12,7 @@
     <artifactId>gulimall-auth-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gulimall-auth-server</name>
-    <description>认证微服务，社交登录OAuth2.0、单点登录</description>
+    <description>认证微服务，社交登录OAuth2.0、单点登�?/description>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
@@ -22,7 +22,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.atguigu.gulimall</groupId>
+            <groupId>com.terenceqin.gulimall</groupId>
             <artifactId>gulimall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <exclusions>

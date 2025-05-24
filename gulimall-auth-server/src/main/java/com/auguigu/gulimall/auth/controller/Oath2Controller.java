@@ -25,8 +25,7 @@ import java.util.Map;
 
 /**
  * <p>Title: Oath2Controller</p>
- * Description：
- * date：2020/6/26 14:14
+ * Description�? * date�?020/6/26 14:14
  */
 @Slf4j
 @Controller
@@ -41,7 +40,7 @@ public class Oath2Controller {
 		if(session.getAttribute(AuthServerConstant.LOGIN_USER) != null){
 			log.info("\n[" +
 					((MemberRespVo)session.getAttribute(AuthServerConstant.LOGIN_USER)).getUsername()
-					+ "] 已下线");
+					+ "] 已下�?);
 		}
 		session.invalidate();
 		return "redirect:http://auth.gulimall.com/login.html";
@@ -78,15 +77,14 @@ public class Oath2Controller {
 			String json = EntityUtils.toString(response.getEntity());
 			SocialUser socialUser = JSON.parseObject(json, SocialUser.class);
 
-			// 相当于我们知道了当前是那个用户
-			// 1.如果用户是第一次进来 自动注册进来(为当前社交用户生成一个会员信息 以后这个账户就会关联这个账号)
+			// 相当于我们知道了当前是那个用�?			// 1.如果用户是第一次进�?自动注册进来(为当前社交用户生成一个会员信�?以后这个账户就会关联这个账号)
 			R login = memberFeignService.login(socialUser);
 			if(login.getCode() == 0){
 				MemberRespVo respVo = login.getData("data" ,new TypeReference<MemberRespVo>() {});
 
 				log.info("\n欢迎 [" + respVo.getUsername() + "] 使用社交账号登录");
-				// 第一次使用session 命令浏览器保存这个用户信息 JESSIONSEID 每次只要访问这个网站就会带上这个cookie
-				// 在发卡的时候扩大session作用域 (指定域名为父域名)
+				// 第一次使用session 命令浏览器保存这个用户信�?JESSIONSEID 每次只要访问这个网站就会带上这个cookie
+				// 在发卡的时候扩大session作用�?(指定域名为父域名)
 				// TODO 1.默认发的当前域的session (需要解决子域session共享问题)
 				/*
 				session.setAttribute("logUser",respVo);

@@ -1,4 +1,4 @@
-ï»¿ipAddr: 192.168.56.10
+ipAddr: 192.168.56.10
 
 spring:
   application:
@@ -17,17 +17,17 @@ spring:
         dashboard: localhost:8333
   redis:
     host: ${ipAddr}
-    #   è®¾ç½®ç¼“å­˜ç±»å‹
+    #   ÉèÖÃ»º´æÀàĞÍ
   cache:
     type: redis
-    #   è®¾ç½®å­˜æ´»æ—¶é—´
+    #   ÉèÖÃ´æ»îÊ±¼ä
     redis:
       time-to-live: 3600000
-      #      å¦‚æœæŒ‡å®šäº†å‰ç¼€å°±ç”¨æˆ‘ä»¬æŒ‡å®šçš„ å¦‚æœæ²¡æœ‰å°±ç”¨ç¼“å­˜çš„åå­—ä½œä¸ºå‰ç¼€
+      #      Èç¹ûÖ¸¶¨ÁËÇ°×º¾ÍÓÃÎÒÃÇÖ¸¶¨µÄ Èç¹ûÃ»ÓĞ¾ÍÓÃ»º´æµÄÃû×Ö×÷ÎªÇ°×º
       #      key-prefix: CACHE_
-      #      æ˜¯å¦ç¼“å­˜ç©ºå€¼
+      #      ÊÇ·ñ»º´æ¿ÕÖµ
       cache-null-values: true
-  #é…ç½®é¡¹ç›®çƒ­éƒ¨ç½²
+  #ÅäÖÃÏîÄ¿ÈÈ²¿Êğ
   devtools:
     restart:
       enabled: true
@@ -41,12 +41,12 @@ spring:
     virtual-host: /
     listener:
       simple:
-        # æ‰‹åŠ¨ç¡®è®¤æ¥å—æ¶ˆæ¯
+        # ÊÖ¶¯È·ÈÏ½ÓÊÜÏûÏ¢
         acknowledge-mode: manual
 
 #  zipkin:
 #    base-url: 10.43.1.52:9411/
-#    # å…³é—­æˆ‘ä»¬è‡ªåŠ¨çš„æœåŠ¡å‘ç°åŠŸèƒ½
+#    # ¹Ø±ÕÎÒÃÇ×Ô¶¯µÄ·şÎñ·¢ÏÖ¹¦ÄÜ
 #    discovery-client-enabled: false
 #    sender:
 #      type: web
@@ -81,5 +81,5 @@ myRabbitmq:
       delayQueue: stock.delay.queue
       delayRoutingKey: stock.locked
       releaseQueue: stock.release.stock.queue
-      # è®¢å•è‡ªåŠ¨è¿‡æœŸæ—¶é—´ å•ä½:(æ¯«ç§’)
+      # ¶©µ¥×Ô¶¯¹ıÆÚÊ±¼ä µ¥Î»:(ºÁÃë)
       ttl: 900000

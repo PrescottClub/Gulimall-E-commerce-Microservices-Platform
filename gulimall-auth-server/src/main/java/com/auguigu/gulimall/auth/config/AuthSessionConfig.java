@@ -9,8 +9,7 @@ import org.springframework.session.web.http.CookieSerializer;
 import org.springframework.session.web.http.DefaultCookieSerializer;
 
 /**
- * Description：设置Session作用域、自定义cookie序列化机制
- */
+ * Description：设置Session作用域、自定义cookie序列化机�? */
 @Configuration
 public class AuthSessionConfig {
 

@@ -7,8 +7,7 @@ import java.util.Date;
 
 /**
  * <p>Title: OrderTo</p>
- * Description：
- * date：2020/7/4 15:16
+ * Description�? * date�?020/7/4 15:16
  */
 @Data
 public class OrderTo {
@@ -19,8 +18,7 @@ public class OrderTo {
 	 */
 	private Long memberId;
 	/**
-	 * 订单号
-	 */
+	 * 订单�?	 */
 	private String orderSn;
 	/**
 	 * 使用的优惠券
@@ -31,8 +29,7 @@ public class OrderTo {
 	 */
 	private Date createTime;
 	/**
-	 * 用户名
-	 */
+	 * 用户�?	 */
 	private String memberUsername;
 	/**
 	 * 订单总额
@@ -47,35 +44,30 @@ public class OrderTo {
 	 */
 	private BigDecimal freightAmount;
 	/**
-	 * 促销优化金额（促销价、满减、阶梯价）
-	 */
+	 * 促销优化金额（促销价、满减、阶梯价�?	 */
 	private BigDecimal promotionAmount;
 	/**
 	 * 积分抵扣金额
 	 */
 	private BigDecimal integrationAmount;
 	/**
-	 * 优惠券抵扣金额
-	 */
+	 * 优惠券抵扣金�?	 */
 	private BigDecimal couponAmount;
 	/**
-	 * 后台调整订单使用的折扣金额
-	 */
+	 * 后台调整订单使用的折扣金�?	 */
 	private BigDecimal discountAmount;
 	/**
-	 * 支付方式【1->支付宝；2->微信；3->银联； 4->货到付款；】
-	 */
+	 * 支付方式�?->支付宝；2->微信�?->银联�?4->货到付款；�?	 */
 	private Integer payType;
 	/**
-	 * 订单来源[0->PC订单；1->app订单]
+	 * 订单来源[0->PC订单�?->app订单]
 	 */
 	private Integer sourceType;
 	/**
-	 * 订单状态【0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单】
-	 */
+	 * 订单状态�?->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单�?	 */
 	private Integer status;
 	/**
-	 * 物流公司(配送方式)
+	 * 物流公司(配送方�?
 	 */
 	private String deliveryCompany;
 	/**
@@ -83,19 +75,16 @@ public class OrderTo {
 	 */
 	private String deliverySn;
 	/**
-	 * 自动确认时间（天）
-	 */
+	 * 自动确认时间（天�?	 */
 	private Integer autoConfirmDay;
 	/**
-	 * 可以获得的积分
-	 */
+	 * 可以获得的积�?	 */
 	private Integer integration;
 	/**
-	 * 可以获得的成长值
-	 */
+	 * 可以获得的成长�?	 */
 	private Integer growth;
 	/**
-	 * 发票类型[0->不开发票；1->电子发票；2->纸质发票]
+	 * 发票类型[0->不开发票�?->电子发票�?->纸质发票]
 	 */
 	private Integer billType;
 	/**
@@ -107,36 +96,29 @@ public class OrderTo {
 	 */
 	private String billContent;
 	/**
-	 * 收票人电话
-	 */
+	 * 收票人电�?	 */
 	private String billReceiverPhone;
 	/**
-	 * 收票人邮箱
-	 */
+	 * 收票人邮�?	 */
 	private String billReceiverEmail;
 	/**
-	 * 收货人姓名
-	 */
+	 * 收货人姓�?	 */
 	private String receiverName;
 	/**
-	 * 收货人电话
-	 */
+	 * 收货人电�?	 */
 	private String receiverPhone;
 	/**
-	 * 收货人邮编
-	 */
+	 * 收货人邮�?	 */
 	private String receiverPostCode;
 	/**
-	 * 省份/直辖市
-	 */
+	 * 省份/直辖�?	 */
 	private String receiverProvince;
 	/**
 	 * 城市
 	 */
 	private String receiverCity;
 	/**
-	 * 区
-	 */
+	 * �?	 */
 	private String receiverRegion;
 	/**
 	 * 详细地址
@@ -151,8 +133,7 @@ public class OrderTo {
 	 */
 	private Integer confirmStatus;
 	/**
-	 * 删除状态【0->未删除；1->已删除】
-	 */
+	 * 删除状态�?->未删除；1->已删除�?	 */
 	private Integer deleteStatus;
 	/**
 	 * 下单时使用的积分

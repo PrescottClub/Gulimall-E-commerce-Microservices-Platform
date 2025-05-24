@@ -17,8 +17,7 @@ public class R extends HashMap<String, Object> {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * @param key 获取指定key的名字
-	 */
+	 * @param key 获取指定key的名�?	 */
 	public <T> T getData(String key, TypeReference<T> typeReference){
 		Object data = get(key);
 		return JSON.parseObject(JSON.toJSONString(data), typeReference);

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.atguigu.gulimall.member.dao.MemberLevelDao">
+<mapper namespace="com.terenceqin.gulimall.member.dao.MemberLevelDao">
 
-	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.atguigu.gulimall.member.entity.MemberLevelEntity" id="memberLevelMap">
+	<!-- 可根据自己的需求，是否要使�?-->
+    <resultMap type="com.terenceqin.gulimall.member.entity.MemberLevelEntity" id="memberLevelMap">
         <result property="id" column="id"/>
         <result property="name" column="name"/>
         <result property="growthPoint" column="growth_point"/>
@@ -17,7 +17,7 @@
         <result property="note" column="note"/>
     </resultMap>
 
-    <select id="getDefaultLevel" resultType="com.atguigu.gulimall.member.entity.MemberLevelEntity">
+    <select id="getDefaultLevel" resultType="com.terenceqin.gulimall.member.entity.MemberLevelEntity">
         SELECT * FROM `ums_member_level`
         WHERE default_status = 1
     </select>
