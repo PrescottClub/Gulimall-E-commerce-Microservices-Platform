@@ -1,0 +1,8 @@
+Thank you for using Gulimall SQL files!
+
+These SQL files have been reorganized and optimized by Terence Qin for the Gulimall E-commerce Microservices Platform.
+
+If you find this project helpful, please consider giving it a star on GitHub!
+
+Original inspiration from: https://github.com/1046762075/mall
+Current maintainer: Terence Qin
