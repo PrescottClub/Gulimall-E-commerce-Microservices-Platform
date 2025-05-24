@@ -17,17 +17,17 @@ spring:
         dashboard: localhost:8333
   redis:
     host: ${ipAddr}
-    #   ���û�������
+    # Redis cache configuration
   cache:
     type: redis
-    #   ���ô��ʱ��
+    # Cache time to live settings
     redis:
       time-to-live: 3600000
-      #      ���ָ����ǰ׺��������ָ���� ���û�о��û����������Ϊǰ׺
-      #      key-prefix: CACHE_
-      #      �Ƿ񻺴��ֵ
+      # If prefix is specified, use it; otherwise use cache name as prefix
+      # key-prefix: CACHE_
+      # Whether to cache null values
       cache-null-values: true
-  #������Ŀ�Ȳ���
+  # Development hot reload configuration
   devtools:
     restart:
       enabled: true
@@ -41,12 +41,12 @@ spring:
     virtual-host: /
     listener:
       simple:
-        # �ֶ�ȷ�Ͻ�����Ϣ
+        # Manual acknowledgment of messages
         acknowledge-mode: manual
 
 #  zipkin:
 #    base-url: 10.43.1.52:9411/
-#    # �ر������Զ��ķ����ֹ���
+#    # Close auto discovery to prevent conflicts
 #    discovery-client-enabled: false
 #    sender:
 #      type: web
@@ -65,7 +65,9 @@ mybatis-plus:
 server:
   port: 11000
 
-logging:  level:    com.terenceqin.gulimall: debug
+logging:
+  level:
+    com.terenceqin.gulimall: debug
 
 myRabbitmq:
   MQConfig:
@@ -79,5 +81,5 @@ myRabbitmq:
       delayQueue: stock.delay.queue
       delayRoutingKey: stock.locked
       releaseQueue: stock.release.stock.queue
-      # �����Զ�����ʱ�� ��λ:(����)
+      # Lock timeout in milliseconds
       ttl: 900000

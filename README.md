@@ -136,21 +136,7 @@ cd gulimall-master
    ```
    - API endpoint: http://localhost:9200
 
-#### **Step 4: Configuration Setup**
-
-1. **Update application.yml files** in each microservice module:
-   
-   **Replace the IP address `192.168.56.10` with your actual IP or localhost:**
-   ```yaml
-   # Change this line in all application.yml files
-   ipAddr: localhost  # or your actual IP address
-   
-   spring:
-     datasource:
-       username: root
-       password: your_mysql_password  # Change this
-       url: jdbc:mysql://localhost:3306/gulimall_xxx
-   ```
+#### **Step 4: Configuration Setup**1. **Update application.yml files** in each microservice module:      **🔧 CRITICAL: Replace the IP address `192.168.56.10` in ALL configuration files:**      **Main services to update:**   - `gulimall-product/src/main/resources/application.yml`   - `gulimall-order/src/main/resources/application.yml`   - `gulimall-member/src/main/resources/application.yml`   - `gulimall-coupon/src/main/resources/application.yml`   - `gulimall-ware/src/main/resources/application.yml`   - `gulimall-cart/src/main/resources/application.yml`   - `gulimall-seckill/src/main/resources/application.yml`   - `gulimall-common/src/main/resources/application.yml`   - `renren-fast/src/main/resources/application*.yml`      **Replace IP configuration:**   ```yaml   # Change this line in all application.yml files   ipAddr: localhost  # or your actual IP address (e.g., 192.168.1.100)      spring:     datasource:       username: root       password: root  # Make sure this matches your MySQL password       url: jdbc:mysql://localhost:3306/gulimall_xxx   ```      **⚠️ Note:** Some files have hardcoded IPs in URLs - update these too!
 
 2. **Update Nacos addresses** - ensure consistency:
    ```yaml
