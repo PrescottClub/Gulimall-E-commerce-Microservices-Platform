@@ -71,65 +71,178 @@ A comprehensive e-commerce microservices platform built with Spring Cloud ecosys
 
 ### Environment Setup
 
-1. **Clone the repository**
-   ```bash
-   git clone [repository-url]
-   cd gulimall-master
+#### **Step 1: Clone and Setup Repository**
+```bash
+git clone https://github.com/PrescottClub/gilimall.git
+cd gulimall-master
+```
+
+#### **Step 2: Database Setup**
+1. **Install MySQL 8.0+** and create databases:
+   ```sql
+   CREATE DATABASE gulimall_admin;
+   CREATE DATABASE gulimall_pms;
+   CREATE DATABASE gulimall_oms;
+   CREATE DATABASE gulimall_ums;
+   CREATE DATABASE gulimall_sms;
+   CREATE DATABASE gulimall_wms;
    ```
 
-2. **Database Setup**
-   - Create databases: `gulimall_pms`, `gulimall_oms`, `gulimall_ums`, `gulimall_sms`, `gulimall_wms`
-   - Import SQL files from `/sql文件/` directory
-   - Update database connection settings in each service's `application.yml`
-
-3. **Infrastructure Services**
+2. **Import SQL files** from `/sql/` directory in order:
    ```bash
-   # Start Nacos (default port 8848)
+   mysql -u root -p gulimall_admin < sql/gulimall_admin.sql
+   mysql -u root -p gulimall_pms < sql/gulimall_pms.sql
+   mysql -u root -p gulimall_oms < sql/gulimall_oms.sql
+   mysql -u root -p gulimall_ums < sql/gulimall_ums.sql
+   mysql -u root -p gulimall_sms < sql/gulimall_sms.sql
+   mysql -u root -p gulimall_wms < sql/gulimall_wms.sql
+   ```
+
+#### **Step 3: Infrastructure Services Setup**
+
+1. **Install and Start Nacos 2.0+**
+   ```bash
+   # Download Nacos from https://nacos.io/
    cd nacos/bin
+   # Windows
+   startup.cmd -m standalone
+   # Linux/Mac
    ./startup.sh -m standalone
-   
-   # Start Redis (default port 6379)
+   ```
+   - Access: http://localhost:8848/nacos (admin/nacos)
+
+2. **Install and Start Redis 5.0+**
+   ```bash
+   # Windows (using Redis for Windows)
+   redis-server.exe
+   # Linux/Mac
    redis-server
-   
-   # Start RabbitMQ (default port 5672)
+   ```
+   - Default port: 6379
+
+3. **Install and Start RabbitMQ 3.8+**
+   ```bash
+   # Enable management plugin
+   rabbitmq-plugins enable rabbitmq_management
+   # Start service
    rabbitmq-server
+   ```
+   - Management UI: http://localhost:15672 (guest/guest)
+
+4. **Install and Start Elasticsearch 7.x**
+   ```bash
+   # Download from https://www.elastic.co/downloads/elasticsearch
+   ./bin/elasticsearch
+   ```
+   - API endpoint: http://localhost:9200
+
+#### **Step 4: Configuration Setup**
+
+1. **Update application.yml files** in each microservice module:
    
-   # Start Elasticsearch (default port 9200)
-   ./elasticsearch
+   **Replace the IP address `192.168.56.10` with your actual IP or localhost:**
+   ```yaml
+   # Change this line in all application.yml files
+   ipAddr: localhost  # or your actual IP address
+   
+   spring:
+     datasource:
+       username: root
+       password: your_mysql_password  # Change this
+       url: jdbc:mysql://localhost:3306/gulimall_xxx
    ```
 
-4. **Configuration**
-   - Configure Nacos server addresses in `bootstrap.properties` files
-   - Update IP addresses in configuration files (currently set to 192.168.56.10)
-   - Configure Redis, MySQL, and RabbitMQ connection parameters
+2. **Update Nacos addresses** - ensure consistency:
+   ```yaml
+   spring:
+     cloud:
+       nacos:
+         discovery:
+           server-addr: localhost:8848  # Use consistent address
+   ```
+
+3. **Configure Redis and RabbitMQ**:
+   ```yaml
+   spring:
+     redis:
+       host: localhost
+     rabbitmq:
+       host: localhost
+   ```
+
+#### **Step 5: Version Compatibility Check**
+- **Java**: JDK 8 or 11
+- **Maven**: 3.6+
+- **Spring Boot**: 2.3.2.RELEASE
+- **Spring Cloud**: Hoxton.SR8
+- **MySQL**: 8.0+
+- **Redis**: 5.0+
+- **Nacos**: 2.0+
+- **RabbitMQ**: 3.8+
+- **Elasticsearch**: 7.x
 
 ### Running the Application
 
-1. **Start Core Services (in order)**
+#### **Step 6: Build and Start Services**
+
+1. **Build the project**:
    ```bash
-   # 1. Start Gateway Service
+   mvn clean compile -DskipTests
+   ```
+
+2. **Start services in the following order**:
+
+   **First - Infrastructure:**
+   ```bash
+   # Start Gateway Service (Port: 88)
    cd gulimall-gateway
    mvn spring-boot:run
-   
-   # 2. Start Product Service  
-   cd gulimall-product
+   ```
+
+   **Second - Core Services:**
+   ```bash
+   # Start Product Service (Port: 10002)
+   cd gulimall-product  
    mvn spring-boot:run
    
-   # 3. Start Member Service
+   # Start Member Service (Port: 8000)
    cd gulimall-member
    mvn spring-boot:run
    
-   # 4. Start Other Services
-   cd gulimall-order && mvn spring-boot:run &
-   cd gulimall-coupon && mvn spring-boot:run &
-   cd gulimall-ware && mvn spring-boot:run &
+   # Start Coupon Service (Port: 7000)
+   cd gulimall-coupon
+   mvn spring-boot:run
    ```
 
-2. **Access the Application**
-   - **Frontend**: http://localhost:10000
-   - **Admin Panel**: http://localhost:8080
+   **Third - Business Services:**
+   ```bash
+   # Start Order Service (Port: 9001)
+   cd gulimall-order
+   mvn spring-boot:run
+   
+   # Start Warehouse Service (Port: 11000)
+   cd gulimall-ware
+   mvn spring-boot:run
+   
+   # Start Search Service (Port: 12000)
+   cd gulimall-search
+   mvn spring-boot:run
+   ```
+
+3. **Access the Application**:
    - **API Gateway**: http://localhost:88
-   - **Nacos Console**: http://localhost:8848/nacos
+   - **Admin Panel**: http://localhost:8080 (renren-fast)
+   - **Nacos Console**: http://localhost:8848/nacos (admin/nacos)
+   - **RabbitMQ Management**: http://localhost:15672 (guest/guest)
+   - **Elasticsearch**: http://localhost:9200
+
+#### **Step 7: Troubleshooting Common Issues**
+
+1. **Port Conflicts**: Ensure ports 88, 7000, 8000, 9001, 10002, 11000, 12000 are available
+2. **Database Connection**: Verify MySQL is running and credentials are correct
+3. **Nacos Connection**: Check if Nacos is accessible at configured address
+4. **Memory Issues**: Increase JVM heap size if needed: `-Xmx2g -Xms1g`
+5. **Logs**: Check application logs in each service for detailed error messages
 
 ### Service Ports
 - **gulimall-gateway**: 88

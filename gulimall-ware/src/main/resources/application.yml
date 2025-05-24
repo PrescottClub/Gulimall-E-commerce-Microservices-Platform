@@ -17,17 +17,17 @@ spring:
         dashboard: localhost:8333
   redis:
     host: ${ipAddr}
-    #   ÉèÖÃ»º´æÀàĞÍ
+    #   ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   cache:
     type: redis
-    #   ÉèÖÃ´æ»îÊ±¼ä
+    #   ï¿½ï¿½ï¿½Ã´ï¿½ï¿½Ê±ï¿½ï¿½
     redis:
       time-to-live: 3600000
-      #      Èç¹ûÖ¸¶¨ÁËÇ°×º¾ÍÓÃÎÒÃÇÖ¸¶¨µÄ Èç¹ûÃ»ÓĞ¾ÍÓÃ»º´æµÄÃû×Ö×÷ÎªÇ°×º
+      #      ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ç°×ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã»ï¿½Ğ¾ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎªÇ°×º
       #      key-prefix: CACHE_
-      #      ÊÇ·ñ»º´æ¿ÕÖµ
+      #      ï¿½Ç·ñ»º´ï¿½ï¿½Öµ
       cache-null-values: true
-  #ÅäÖÃÏîÄ¿ÈÈ²¿Êğ
+  #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½È²ï¿½ï¿½ï¿½
   devtools:
     restart:
       enabled: true
@@ -41,12 +41,12 @@ spring:
     virtual-host: /
     listener:
       simple:
-        # ÊÖ¶¯È·ÈÏ½ÓÊÜÏûÏ¢
+        # ï¿½Ö¶ï¿½È·ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
         acknowledge-mode: manual
 
 #  zipkin:
 #    base-url: 10.43.1.52:9411/
-#    # ¹Ø±ÕÎÒÃÇ×Ô¶¯µÄ·şÎñ·¢ÏÖ¹¦ÄÜ
+#    # ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½
 #    discovery-client-enabled: false
 #    sender:
 #      type: web
@@ -65,9 +65,7 @@ mybatis-plus:
 server:
   port: 11000
 
-logging:
-  level:
-    com.atguigu: debug
+logging:  level:    com.terenceqin.gulimall: debug
 
 myRabbitmq:
   MQConfig:
@@ -81,5 +79,5 @@ myRabbitmq:
       delayQueue: stock.delay.queue
       delayRoutingKey: stock.locked
       releaseQueue: stock.release.stock.queue
-      # ¶©µ¥×Ô¶¯¹ıÆÚÊ±¼ä µ¥Î»:(ºÁÃë)
+      # ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ ï¿½ï¿½Î»:(ï¿½ï¿½ï¿½ï¿½)
       ttl: 900000
