@@ -19,6 +19,8 @@ import lombok.Data;
 public class AttrEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+
+	private Integer valueType;
 	/**
 	 * 属性id
 	 */
